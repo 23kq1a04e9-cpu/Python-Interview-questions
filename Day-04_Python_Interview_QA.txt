@@ -1,0 +1,76 @@
+PYTHON INTERVIEW QUESTIONS — DAY 04
+Track: Varshi
+Level: Beginner → Intermediate
+
+Q1. What is a nested list in Python?
+
+Answer:
+A nested list is a list that contains one or more lists as its elements. It is useful for representing data in rows and columns.
+
+Example:
+matrix = [[1, 2], [3, 4]]
+print(matrix[0][1])
+
+Output:
+2
+
+
+Q2. How do you access elements in a nested list?
+
+Answer:
+You can access elements in a nested list by using multiple indexes. The first index selects the inner list, and the second index selects an element from that list.
+
+Example:
+students = [["Alex", 21], ["Sam", 22]]
+print(students[1][0])
+
+Output:
+Sam
+
+
+Q3. What is a list comprehension in Python?
+
+Answer:
+A list comprehension is a concise way to create a new list from an iterable, optionally applying a condition or transformation.
+
+Example:
+squares = [x * x for x in range(1, 5)]
+print(squares)
+
+Output:
+[1, 4, 9, 16]
+
+
+Q4. What is the difference between append() and extend() in Python?
+
+Answer:
+append() adds a single object as one element to the end of a list, while extend() adds each element from an iterable to the list.
+
+Example:
+a = [1, 2]
+a.append([3, 4])
+print(a)
+
+b = [1, 2]
+b.extend([3, 4])
+print(b)
+
+Output:
+[1, 2, [3, 4]]
+[1, 2, 3, 4]
+
+
+Q5. What is the difference between == and is in Python?
+
+Answer:
+== compares the values of two objects, while is checks whether two references point to the same object.
+
+Example:
+a = [1, 2]
+b = [1, 2]
+print(a == b)
+print(a is b)
+
+Output:
+True
+False
