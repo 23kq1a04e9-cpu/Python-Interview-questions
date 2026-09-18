@@ -1,6 +1,5 @@
 PYTHON INTERVIEW QUESTIONS — DAY 04
-Track: Varshi
-Level: Beginner → Intermediate
+
 
 Q1. What is a nested list in Python?
 
