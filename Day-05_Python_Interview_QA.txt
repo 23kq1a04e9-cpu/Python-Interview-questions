@@ -1,0 +1,86 @@
+PYTHON INTERVIEW QUESTIONS — DAY 05
+Level: Intermediate Basics → Functions
+
+1. What is the difference between sort() and sorted() in Python?
+
+Answer:
+sort() modifies the original list and returns None, while sorted() returns a new sorted list without changing the original iterable.
+
+Example:
+numbers = [3, 1, 2]
+numbers.sort()
+print(numbers)
+
+numbers = [3, 1, 2]
+result = sorted(numbers)
+print(result)
+
+Output:
+[1, 2, 3]
+[1, 2, 3]
+
+
+2. What is a function in Python?
+
+Answer:
+A function is a reusable block of code designed to perform a specific task. It is defined using the def keyword and can accept inputs and return a result.
+
+Example:
+def add(a, b):
+    return a + b
+
+print(add(10, 20))
+
+Output:
+30
+
+
+3. What is the enumerate() function in Python?
+
+Answer:
+enumerate() adds a counter to an iterable and returns both the index and the corresponding value during iteration.
+
+Example:
+languages = ["Python", "Java", "C++"]
+
+for index, language in enumerate(languages):
+    print(index, language)
+
+Output:
+0 Python
+1 Java
+2 C++
+
+
+4. What are function parameters and arguments in Python?
+
+Answer:
+A parameter is a variable defined in a function declaration, while an argument is the actual value passed to the function when it is called.
+
+Example:
+def greet(name):
+    print("Hello", name)
+
+greet("Alex")
+
+Output:
+Hello Alex
+
+
+5. What is the difference between pass, break, and continue in Python?
+
+Answer:
+pass does nothing and is used as a placeholder, break terminates the loop completely, and continue skips the current iteration and moves to the next iteration.
+
+Example:
+for i in range(5):
+    if i == 2:
+        continue
+    if i == 4:
+        break
+    print(i)
+
+Output:
+0
+1
+3
