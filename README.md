@@ -192,6 +192,14 @@ Day 04 — Beginner to Intermediate
 18. What is a list comprehension in Python?
 19. What is the difference between append() and extend() in Python?
 20. What is the difference between == and is in Python?
+
+**Day 05 — Intermediate Basics** 
+--------------------------------
+21. What is the difference between sort() and sorted() in Python?
+22. What is a function in Python?
+23. What is the enumerate() function in Python?
+24. What are function parameters and arguments in Python?
+25. What is the difference between pass, break, and continue in Python?
     
 PROGRESS TRACKING
 -----------------
