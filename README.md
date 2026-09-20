@@ -200,6 +200,13 @@ Day 04 — Beginner to Intermediate
 23. What is the enumerate() function in Python?
 24. What are function parameters and arguments in Python?
 25. What is the difference between pass, break, and continue in Python?
+## Day 06 — Functions
+----------------------
+26. What is the difference between print() and return in a Python function?
+27. What are default arguments in Python?
+28. What are positional and keyword arguments in Python?
+29. What is variable scope in Python?
+30. What is the difference between local and global variables in Python?
     
 PROGRESS TRACKING
 -----------------
