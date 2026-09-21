@@ -1,0 +1,85 @@
+PYTHON INTERVIEW QUESTIONS — DAY 07
+Level: Functions — Intermediate
+
+31. What are *args in Python?
+
+Answer:
+*args allows a function to accept any number of positional arguments. Inside the function, the arguments are received as a tuple.
+
+Example:
+def add(*numbers):
+    return sum(numbers)
+
+print(add(10, 20, 30))
+
+Output:
+60
+
+
+32. What are **kwargs in Python?
+
+Answer:
+**kwargs allows a function to accept any number of keyword arguments. Inside the function, the arguments are received as a dictionary.
+
+Example:
+def show_info(**details):
+    print(details)
+
+show_info(name="Alex", age=21)
+
+Output:
+{'name': 'Alex', 'age': 21}
+
+
+33. What is a lambda function in Python?
+
+Answer:
+A lambda function is a small anonymous function written using the lambda keyword. It can take any number of arguments but contains a single expression.
+
+Example:
+square = lambda x: x * x
+print(square(5))
+
+Output:
+25
+
+
+34. What is recursion in Python?
+
+Answer:
+Recursion is a technique in which a function calls itself to solve a problem. A recursive function must have a base condition to stop the recursive calls.
+
+Example:
+def factorial(n):
+    if n == 1:
+        return 1
+    return n * factorial(n - 1)
+
+print(factorial(5))
+
+Output:
+120
+
+
+35. What is the difference between a function with a return value and a function without a return value?
+
+Answer:
+A function with a return statement sends a value back to the caller, while a function without a return statement returns None by default.
+
+Example:
+def add(a, b):
+    return a + b
+
+def greet(name):
+    print("Hello", name)
+
+result = add(10, 20)
+print(result)
+
+value = greet("Alex")
+print(value)
+
+Output:
+30
+Hello Alex
+None
