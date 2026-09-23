@@ -1,0 +1,96 @@
+PYTHON INTERVIEW QUESTIONS - DAY 08
+Level: Intermediate
+
+36. What is the difference between a normal function and a lambda function in Python?
+
+Answer:
+A normal function is defined using the def keyword and can contain multiple statements, while a lambda function is a small anonymous function written in a single expression.
+
+Example:
+# Normal function
+def add(a, b):
+    return a + b
+
+print(add(2, 3))
+
+# Lambda function
+add_lambda = lambda a, b: a + b
+print(add_lambda(2, 3))
+
+Output:
+5
+5
+
+
+37. What is the map() function in Python?
+
+Answer:
+The map() function applies a given function to every element of an iterable and returns the transformed results.
+
+Example:
+numbers = [1, 2, 3, 4]
+result = list(map(lambda x: x * 2, numbers))
+print(result)
+
+Output:
+[2, 4, 6, 8]
+
+
+38. What is the filter() function in Python?
+
+Answer:
+The filter() function is used to select elements from an iterable based on a condition. It keeps only the elements for which the condition returns True.
+
+Example:
+numbers = [1, 2, 3, 4, 5]
+result = list(filter(lambda x: x % 2 == 0, numbers))
+print(result)
+
+Output:
+[2, 4]
+
+
+39. What is the purpose of the global keyword in Python?
+
+Answer:
+The global keyword is used inside a function when we want to modify a variable that belongs to the global scope.
+
+Example:
+count = 10
+
+def update():
+    global count
+    count = 20
+
+update()
+print(count)
+
+Output:
+20
+
+
+40. What is the difference between map() and filter() in Python?
+
+Answer:
+The map() function transforms every element of an iterable, whereas the filter() function selects only the elements that satisfy a given condition.
+
+Easy way to remember:
+map = Modify
+filter = Select
+
+Example:
+numbers = [1, 2, 3, 4, 5]
+
+mapped = list(map(lambda x: x * 2, numbers))
+filtered = list(filter(lambda x: x % 2 == 0, numbers))
+
+print(mapped)
+print(filtered)
+
+Output:
+[2, 4, 6, 8, 10]
+[2, 4]
+
+Real-world example:
+map() can be used to increase every employee salary by 10%.
+filter() can be used to select employees whose salary is above a certain amount.
