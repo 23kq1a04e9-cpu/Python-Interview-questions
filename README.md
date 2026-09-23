@@ -217,6 +217,14 @@ Day 04 — Beginner to Intermediate
 34. What is recursion in Python?
 35. What is the difference between a function with a return value and a function without a return value?
     
+## Day 08 — Functions — Intermediate
+------------------------------------
+36. What is the difference between a normal function and a lambda function in Python?
+37. What is the map() function in Python?
+38. What is the filter() function in Python?
+39. What is the purpose of the global keyword in Python?
+40. What is the difference between map() and filter() in Python?
+    
 PROGRESS TRACKING
 -----------------
 Every day:
