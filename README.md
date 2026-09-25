@@ -65,6 +65,34 @@ Day 04 — Beginner to Intermediate
 39. What is the purpose of the global keyword in Python?
 40. What is the difference between map() and filter() in Python?
     
+# Day 09 — Exception Handling
+-----------------------------
+
+41. What is an exception in Python?
+
+42. What is the difference between a syntax error and an exception?
+
+43. What is the purpose of try and except in Python?
+
+44. What is the difference between else and finally in exception handling?
+
+45. What is the raise keyword in Python?
+
+# Day 10 — Exception Handling: Advanced Basics
+----------------------------------------------
+
+46. What are the common built-in exceptions in Python?
+
+47. Can we use multiple "except" blocks in Python?
+
+48. What is the difference between handling a specific exception and handling a general exception?
+
+49. Can we use "try" without "except" in Python?
+
+50. Can we use "try", "except", "else", and "finally" together in Python?
+
+
+
 
 OBJECTIVE
 ---------
