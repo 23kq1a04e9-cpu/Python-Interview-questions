@@ -1,0 +1,138 @@
+Day 11 – Python Interview Questions and Answers
+Topic: Object-Oriented Programming (OOP) – Part 1
+Questions 51–55
+Prepared for: Varshi
+
+============================================================
+51. What is Object-Oriented Programming (OOP) in Python?
+============================================================
+
+Interview answer:
+Object-Oriented Programming, or OOP, is a programming approach in which we organize code using classes and objects. A class defines structure and behavior, while objects are individual instances created from that class. OOP helps us keep related data and functions together, reuse code, and make programs easier to maintain. Python supports OOP concepts such as inheritance, encapsulation, polymorphism, and abstraction.
+
+Example:
+Imagine a college management system. A Student class can define details such as name and roll number, along with actions such as displaying student information. Each student can be represented by a separate object.
+
+Why it matters:
+OOP is useful in applications involving entities such as students, employees, bank accounts, and products.
+
+Quick memory point:
+OOP = organizing programs using classes and objects.
+
+============================================================
+52. What is a class in Python?
+============================================================
+
+Interview answer:
+A class in Python is a blueprint or template used to create objects. It can contain attributes, which store data, and methods, which define behavior. We define a class using the class keyword. A class describes what its objects can have and do; creating an object gives us a specific instance of that class.
+
+Example:
+    class Student:
+        def display(self):
+            print("Student details")
+
+Here, Student is a class and display() is a method defined inside it.
+
+Output:
+No output is produced until display() is called through an object.
+
+Real-world example:
+A Student class is like a form template. The template defines the fields, while each completed form represents a particular student.
+
+Quick memory point:
+Class = blueprint that defines attributes and methods.
+
+============================================================
+53. What is an object in Python?
+============================================================
+
+Interview answer:
+An object is an instance of a class. It represents a specific item created using the class blueprint. An object can have its own attribute values and can use the methods defined by its class. We create an object by calling the class name, usually with parentheses.
+
+Example:
+    class Student:
+        def display(self):
+            print("Hello, student")
+
+    s1 = Student()
+    s1.display()
+
+Output:
+    Hello, student
+
+Explanation:
+Student is the class, and s1 is an object created from it. The object s1 can access the display() method.
+
+Real-world example:
+If Student is a class, Varshi and Ravi can be represented by two different Student objects, each with different details.
+
+Quick memory point:
+Object = a specific instance of a class.
+
+============================================================
+54. What is the difference between a class and an object in Python?
+============================================================
+
+Interview answer:
+A class is a blueprint that defines the attributes and methods its objects can use. An object is an instance created from that class. The class describes the general structure, while each object represents a specific instance and can hold its own data. We define a class once and can create many objects from it.
+
+Example:
+    class Student:
+        pass
+
+    s1 = Student()
+    s2 = Student()
+
+Explanation:
+Student is the class. s1 and s2 are two separate objects created from the same class. They are instances of the same type, but they are distinct objects.
+
+Real-world example:
+A house plan is like a class. Different houses built using that plan are like objects.
+
+Quick memory point:
+Class = design; object = instance made from the design.
+
+============================================================
+55. What is the purpose of the self parameter in Python?
+============================================================
+
+Interview answer:
+The self parameter refers to the current object of a class. It allows an instance method to access or modify attributes and call other methods belonging to that particular object. In Python, self is written as the first parameter of an instance method. It is a convention rather than a reserved keyword, but using the name self is standard practice.
+
+Example:
+    class Student:
+        def set_name(self, name):
+            self.name = name
+
+        def display(self):
+            print(self.name)
+
+    s1 = Student()
+    s1.set_name("Varshi")
+    s1.display()
+
+Output:
+    Varshi
+
+Explanation:
+When s1.set_name("Varshi") is called, Python passes s1 as the instance argument. Therefore, self.name refers to the name attribute of that object.
+
+Quick memory point:
+self = reference to the current instance.
+
+============================================================
+Day 11 Quick Revision
+============================================================
+
+51. OOP organizes code using classes and objects.
+52. A class is a blueprint that defines attributes and methods.
+53. An object is an instance of a class.
+54. A class defines the structure; objects are individual instances.
+55. self refers to the current object inside instance methods.
+
+Interview tip:
+Try answering in this order:
+1. Give a clear definition.
+2. Explain the purpose in one or two sentences.
+3. Give a simple example.
+4. Mention the result or real-world use when relevant.
