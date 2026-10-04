@@ -1,0 +1,105 @@
+Day 13 – Python Interview Questions and Answers
+Topic: OOP: Methods
+Questions 61–65
+
+============================================================
+
+61. What are instance methods in Python?
+------------------------------------------------------------
+An instance method is a method that works with a particular object. It takes `self` as its first parameter, allowing it to read or modify that object's instance variables and call other instance methods. Instance methods are the most common type of method in a class. They are useful when an operation depends on the data stored in a specific object.
+
+Example:
+    class Student:
+        def __init__(self, name):
+            self.name = name
+
+        def show_name(self):
+            print(self.name)
+
+    s1 = Student("Anu")
+    s1.show_name()
+
+Output:
+    Anu
+
+The method uses `self.name` to access the current object's data.
+
+Quick point: Instance methods operate on an object and receive `self`.
+
+
+62. What are class methods in Python?
+------------------------------------------------------------
+A class method is a method that receives the class itself as its first parameter, conventionally named `cls`. We define it using the `@classmethod` decorator. It is useful when an operation needs to work with class-level data or create objects in an alternative way. Unlike an instance method, it does not receive a particular instance automatically.
+
+Example:
+    class Student:
+        college = "ABC College"
+
+        @classmethod
+        def show_college(cls):
+            print(cls.college)
+
+    Student.show_college()
+
+Output:
+    ABC College
+
+Here, `cls` refers to the Student class.
+
+Quick point: Class methods work with the class and use `cls`.
+
+
+63. What are static methods in Python?
+------------------------------------------------------------
+A static method is a method placed inside a class that does not automatically receive either the instance or the class as its first parameter. We define it using `@staticmethod`. It is useful for a helper operation that is logically related to the class but does not need instance-specific or class-specific data. It can be called through the class or an object.
+
+Example:
+    class Calculator:
+        @staticmethod
+        def add(a, b):
+            return a + b
+
+    print(Calculator.add(4, 6))
+
+Output:
+    10
+
+The method uses only the arguments passed to it.
+
+Quick point: Static methods are class-associated utility methods without automatic `self` or `cls`.
+
+
+64. What is the difference between instance methods, class methods, and static methods?
+------------------------------------------------------------
+The main difference is what each method receives and what it is designed to work with. An instance method receives `self` and works with an individual object's data. A class method receives `cls` and works with class-level data or class-related operations. A static method receives no automatic first argument and is generally used for a related utility operation that needs neither object nor class state.
+
+Example:
+- Instance method: `show_name(self)` uses an object's name.
+- Class method: `show_college(cls)` reads a shared college value.
+- Static method: `is_valid_age(age)` checks a value without accessing object or class data.
+
+Quick point: Instance = `self`; class = `cls`; static = no automatic receiver.
+
+
+65. What is the `@classmethod` decorator in Python?
+------------------------------------------------------------
+The `@classmethod` decorator changes a method so that Python passes the class as its first argument instead of an instance. That first argument is conventionally called `cls`. Class methods are commonly used to access or update class-level information and to provide alternative ways to create instances. They can also work correctly with subclasses because `cls` refers to the class through which the method is called.
+
+Example:
+    class Item:
+        category = "General"
+
+        @classmethod
+        def show_category(cls):
+            return cls.category
+
+    print(Item.show_category())
+
+Output:
+    General
+
+Quick point: `@classmethod` makes the class itself the method's first argument.
+
+
+Interview tip:
+Start with a direct definition, explain the purpose, and support your answer with the example when relevant.

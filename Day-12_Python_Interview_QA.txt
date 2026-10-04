@@ -1,0 +1,109 @@
+Day 12 – Python Interview Questions and Answers
+Topic: OOP: Constructors and Variables
+Questions 56–60
+
+============================================================
+
+56. What is the `__init__()` method in Python?
+------------------------------------------------------------
+The `__init__()` method is a special method that Python calls automatically when a new object is created. It is commonly used to initialize an object's attributes with starting values. It receives the current object through `self`, followed by any values passed during object creation. Although it is often called a constructor, technically it initializes the object after it has been created.
+
+Example:
+    class Student:
+        def __init__(self, name):
+            self.name = name
+
+    s1 = Student("Anu")
+    print(s1.name)
+
+Output:
+    Anu
+
+Here, `__init__()` assigns the given name to the new object's `name` attribute.
+
+Quick point: `__init__()` initializes an object when it is created.
+
+
+57. What is a constructor in Python?
+------------------------------------------------------------
+A constructor is the part of a class-related process that prepares a new object for use. In normal Python classes, `__init__()` is the method most commonly used for this purpose because it initializes the object's attributes. When we create an object, Python creates the instance and then calls `__init__()` to set it up. This helps ensure that an object starts with the required data.
+
+Example:
+    class Employee:
+        def __init__(self, name, salary):
+            self.name = name
+            self.salary = salary
+
+    emp = Employee("Ravi", 30000)
+
+The object `emp` is initialized with a name and salary.
+
+Quick point: In everyday Python discussions, `__init__()` is commonly referred to as the constructor, though its technical role is initialization.
+
+
+58. What is the difference between `__init__()` and a normal method?
+------------------------------------------------------------
+`__init__()` is a special initialization method that Python calls automatically when an object is created. A normal method is called explicitly when we want an object to perform an action. Both can be defined inside a class and both can use `self`, but their purposes and calling behavior are different. `__init__()` usually sets initial attribute values, while normal methods implement other behavior.
+
+Example:
+    class Student:
+        def __init__(self, name):
+            self.name = name
+
+        def greet(self):
+            print("Hello", self.name)
+
+    s1 = Student("Anu")
+    s1.greet()
+
+Output:
+    Hello Anu
+
+The initializer runs during object creation; `greet()` runs because we call it.
+
+Quick point: `__init__()` initializes automatically; normal methods perform actions when called.
+
+
+59. What are instance variables in Python?
+------------------------------------------------------------
+Instance variables are variables that belong to a particular object. They usually store data that can be different for each instance of a class. We commonly create them using `self` inside `__init__()` or another instance method. If two objects have different values for an instance variable, changing one object's value does not automatically change the other object's value.
+
+Example:
+    class Student:
+        def __init__(self, name):
+            self.name = name
+
+    s1 = Student("Anu")
+    s2 = Student("Ravi")
+    print(s1.name, s2.name)
+
+Output:
+    Anu Ravi
+
+Here, each object has its own `name` value.
+
+Quick point: Instance variables store object-specific data.
+
+
+60. What are class variables in Python?
+------------------------------------------------------------
+Class variables are defined directly inside a class, outside its instance methods. They belong to the class and are shared by instances unless an instance creates its own attribute with the same name. They are useful for data that should be common to all objects, such as an organization name or a standard interest rate. We can access them through the class name or through an instance.
+
+Example:
+    class Student:
+        college = "ABC College"
+
+    s1 = Student()
+    s2 = Student()
+    print(s1.college, s2.college)
+
+Output:
+    ABC College ABC College
+
+Both objects can access the same class variable.
+
+Quick point: Class variables hold data shared at the class level.
+
+
+Interview tip:
+Start with a direct definition, explain the purpose, and support your answer with the example when relevant.

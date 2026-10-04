@@ -1,0 +1,114 @@
+Day 14 – Python Interview Questions and Answers
+Topic: OOP: Inheritance
+Questions 66–70
+
+============================================================
+
+66. What is inheritance in Python?
+------------------------------------------------------------
+Inheritance is an OOP feature that allows one class to reuse and extend the attributes and methods of another class. The existing class is called the parent or base class, and the new class is called the child or derived class. It reduces repeated code and helps represent relationships between types. A child class can also add its own features or customize inherited behavior.
+
+Example:
+    class Animal:
+        def eat(self):
+            print("Eating")
+
+    class Dog(Animal):
+        pass
+
+    d = Dog()
+    d.eat()
+
+Output:
+    Eating
+
+Dog inherits the `eat()` method from Animal.
+
+Quick point: Inheritance lets a child class reuse and extend a parent class.
+
+
+67. What are the different types of inheritance in Python?
+------------------------------------------------------------
+Python supports several common inheritance structures. In single inheritance, one child inherits from one parent. In multiple inheritance, one child inherits from more than one parent. In multilevel inheritance, a class inherits from a child class in a chain. In hierarchical inheritance, multiple child classes inherit from the same parent. Hybrid inheritance combines two or more of these structures.
+
+Example:
+A Vehicle class with Car as a child is single inheritance. If Car inherits from both Vehicle and Insurable, that is multiple inheritance.
+
+Quick point: Common types are single, multiple, multilevel, hierarchical, and hybrid inheritance.
+
+
+68. What is single inheritance in Python?
+------------------------------------------------------------
+Single inheritance occurs when a child class inherits from exactly one parent class. The child can use the parent's accessible attributes and methods and can also define additional features. This structure is simple and useful when one class is a specialized version of another. It supports code reuse without requiring multiple parent classes.
+
+Example:
+    class Vehicle:
+        def start(self):
+            print("Vehicle started")
+
+    class Car(Vehicle):
+        pass
+
+    car = Car()
+    car.start()
+
+Output:
+    Vehicle started
+
+Car inherits from one parent, Vehicle.
+
+Quick point: One child class inherits from one parent class.
+
+
+69. What is multiple inheritance in Python?
+------------------------------------------------------------
+Multiple inheritance occurs when a class inherits from more than one parent class. The child class can use accessible features from both parents. Python uses a method resolution order, or MRO, to determine the order in which parent classes are searched when resolving methods and attributes. Multiple inheritance can be useful, but it should be designed carefully to avoid confusing class relationships.
+
+Example:
+    class Camera:
+        def take_photo(self):
+            print("Photo taken")
+
+    class Phone:
+        def call(self):
+            print("Calling")
+
+    class SmartPhone(Camera, Phone):
+        pass
+
+    device = SmartPhone()
+    device.call()
+    device.take_photo()
+
+Output:
+    Calling
+    Photo taken
+
+Quick point: Multiple inheritance means inheriting from more than one parent class.
+
+
+70. What is the `super()` function in Python?
+------------------------------------------------------------
+The `super()` function provides a way to call methods from a parent class according to Python's method resolution order. It is often used in a child class's `__init__()` method to initialize the parent part of an object. It is especially helpful in inheritance structures because it supports cooperative method calls rather than directly naming a parent class.
+
+Example:
+    class Person:
+        def __init__(self, name):
+            self.name = name
+
+    class Student(Person):
+        def __init__(self, name, roll_no):
+            super().__init__(name)
+            self.roll_no = roll_no
+
+    s = Student("Anu", 10)
+    print(s.name, s.roll_no)
+
+Output:
+    Anu 10
+
+Quick point: `super()` helps call the next implementation in the method resolution order.
+
+
+Interview tip:
+Start with a direct definition, explain the purpose, and support your answer with the example when relevant.

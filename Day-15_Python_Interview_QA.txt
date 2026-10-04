@@ -1,0 +1,107 @@
+Day 15 – Python Interview Questions and Answers
+Topic: OOP: Polymorphism and Encapsulation
+Questions 71–75
+
+============================================================
+
+71. What is polymorphism in Python?
+------------------------------------------------------------
+Polymorphism means that the same operation or method name can work with different types of objects, with behavior appropriate to each type. In Python, this often appears through method overriding and duck typing. It allows code to work with different objects through a common interface, making programs more flexible and easier to extend.
+
+Example:
+    print(len("Python"))
+    print(len([10, 20, 30]))
+
+Output:
+    6
+    3
+
+The same `len()` function works with a string and a list, returning the length of each.
+
+Quick point: Polymorphism means one interface or operation can have different behavior depending on the object.
+
+
+72. What are the different types of polymorphism in Python?
+------------------------------------------------------------
+Polymorphism in Python is commonly discussed through method overriding, operator overloading, and duck typing. Method overriding allows a child class to provide its own implementation of an inherited method. Operator overloading lets operators such as `+` behave appropriately for different object types. Duck typing focuses on whether an object supports the required behavior rather than checking its exact class.
+
+Example:
+The `+` operator adds numbers but joins strings:
+    print(2 + 3)
+    print("Py" + "thon")
+
+Output:
+    5
+    Python
+
+Quick point: Common forms include overriding, operator overloading, and duck typing. Python does not support traditional signature-based method overloading in the same way as some languages.
+
+
+73. What is method overriding in Python?
+------------------------------------------------------------
+Method overriding happens when a child class defines a method with the same name as a method in its parent class. When that method is called on a child object, Python uses the child's implementation, following the method resolution order. Overriding allows a child class to specialize or change inherited behavior while keeping a familiar method interface.
+
+Example:
+    class Animal:
+        def sound(self):
+            print("Some sound")
+
+    class Dog(Animal):
+        def sound(self):
+            print("Bark")
+
+    Dog().sound()
+
+Output:
+    Bark
+
+The Dog class overrides the inherited `sound()` method.
+
+Quick point: Overriding means redefining an inherited method in a child class.
+
+
+74. What is the difference between method overloading and method overriding in Python?
+------------------------------------------------------------
+Method overloading usually means defining multiple methods with the same name but different parameter lists. Python does not support traditional method overloading by signature in the same way as languages such as Java; a later definition with the same name replaces an earlier one. Similar behavior can often be achieved using default arguments or flexible arguments. Method overriding, in contrast, occurs when a child class redefines a method inherited from its parent.
+
+Example:
+Overriding:
+    class Parent:
+        def show(self):
+            print("Parent")
+
+    class Child(Parent):
+        def show(self):
+            print("Child")
+
+    Child().show()
+
+Output:
+    Child
+
+Quick point: Overloading varies a method's accepted arguments; overriding replaces inherited behavior in a subclass. Python handles these differently from some statically typed languages.
+
+
+75. What is encapsulation in Python?
+------------------------------------------------------------
+Encapsulation is the OOP principle of keeping data and the methods that operate on it together, while controlling how that data is accessed or changed. Python uses naming conventions and properties to support this. A single leading underscore indicates that an attribute is intended for internal use, while double leading underscores trigger name mangling. These features discourage accidental access but do not provide strict private access control.
+
+Example:
+    class Account:
+        def __init__(self, balance):
+            self._balance = balance
+
+        def get_balance(self):
+            return self._balance
+
+    account = Account(500)
+    print(account.get_balance())
+
+Output:
+    500
+
+Quick point: Encapsulation groups data and behavior and helps manage access to internal state.
+
+
+Interview tip:
+Start with a direct definition, explain the purpose, and support your answer with the example when relevant.

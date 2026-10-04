@@ -1,0 +1,72 @@
+Day 16 – Python Interview Questions and Answers
+Topic: OOP: Abstraction
+Questions 76–80
+
+============================================================
+
+76. What is abstraction in Python?
+------------------------------------------------------------
+Abstraction means showing the essential features of something while hiding unnecessary implementation details. It lets a user work with an operation without needing to know every step happening internally. In Python, abstraction can be implemented using abstract base classes and abstract methods through the `abc` module. It helps define a common interface for related classes.
+
+Example:
+When we call a car's `start()` operation, we use the feature without needing to understand every internal engine process.
+
+Quick point: Abstraction focuses on what an object does rather than all the details of how it does it.
+
+
+77. What is the difference between abstraction and encapsulation?
+------------------------------------------------------------
+Abstraction and encapsulation are related but have different goals. Abstraction hides complex implementation details and exposes the essential operations a user needs. Encapsulation groups data and related methods and helps control how internal state is accessed or modified. Abstraction is mainly about simplifying the interface; encapsulation is about organizing and managing access to data and behavior.
+
+Example:
+A payment system may expose a simple `pay()` operation, which is abstraction. Keeping account-related data and methods together and controlling balance updates is encapsulation.
+
+Quick point: Abstraction hides complexity; encapsulation bundles and manages internal state.
+
+
+78. What are abstract classes in Python?
+------------------------------------------------------------
+An abstract class is a class designed to act as a base for other classes. It can define abstract methods that subclasses are expected to implement, and it may also contain regular methods and shared attributes. In Python, abstract classes are commonly created using `ABC` from the `abc` module. A class with unimplemented abstract methods cannot be instantiated until those methods are implemented.
+
+Example:
+    from abc import ABC, abstractmethod
+
+    class Shape(ABC):
+        @abstractmethod
+        def area(self):
+            pass
+
+A concrete subclass of Shape must provide an `area()` implementation before it can be instantiated.
+
+Quick point: An abstract class defines a shared interface and may prevent direct object creation.
+
+
+79. What is the purpose of the `@abstractmethod` decorator?
+------------------------------------------------------------
+The `@abstractmethod` decorator marks a method as abstract. It indicates that subclasses are expected to provide an implementation of that method. It is usually used with a class that inherits from `ABC` in the `abc` module. If a subclass does not implement all inherited abstract methods, Python prevents creating an instance of that subclass.
+
+Example:
+    from abc import ABC, abstractmethod
+
+    class Shape(ABC):
+        @abstractmethod
+        def area(self):
+            pass
+
+Here, every concrete subclass must implement `area()`.
+
+Quick point: `@abstractmethod` declares a method that concrete subclasses must implement.
+
+
+80. What is the difference between an abstract class and a concrete class?
+------------------------------------------------------------
+An abstract class is intended to be a base class and may contain abstract methods that are not yet fully implemented. A concrete class provides implementations for all required abstract methods and can be instantiated. Abstract classes are useful for defining a common interface, while concrete classes provide usable, specific behavior.
+
+Example:
+Shape can be an abstract class with an abstract `area()` method. Circle can be a concrete class that implements `area()` using its radius. We can create a Circle object, but not an instance of Shape while its abstract method remains unimplemented.
+
+Quick point: Abstract classes define incomplete or shared contracts; concrete classes fulfill the requirements and can be instantiated.
+
+
+Interview tip:
+Start with a direct definition, explain the purpose, and support your answer with the example when relevant.
