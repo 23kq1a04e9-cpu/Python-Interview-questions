@@ -73,8 +73,8 @@ Day 04 — Beginner to Intermediate
 44. What is the difference between else and finallyin exception handling?
 45. What is the raise keyword in Python?
     
-# Day 10 — Exception Handling: Advanced Basics
-----------------------------------------------
+# Day 10 — Exception Handling
+-----------------------------
 46. What are the common built-in exceptions in Python?
 47. Can we use multiple "except" blocks in Python?
 48. What is the difference between handling a specific exception and handling a general exception?
