@@ -67,34 +67,22 @@ Day 04 — Beginner to Intermediate
     
 # Day 09 — Exception Handling
 -----------------------------
-
 41. What is an exception in Python?
-
 42. What is the difference between a syntax error and an exception?
-
 43. What is the purpose of try and except in Python?
-
-44. What is the difference between else and finally in exception handling?
-
+44. What is the difference between else and finallyin exception handling?
 45. What is the raise keyword in Python?
-
+    
 # Day 10 — Exception Handling: Advanced Basics
 ----------------------------------------------
-
 46. What are the common built-in exceptions in Python?
-
 47. Can we use multiple "except" blocks in Python?
-
 48. What is the difference between handling a specific exception and handling a general exception?
-
 49. Can we use "try" without "except" in Python?
-
 50. Can we use "try", "except", "else", and "finally" together in Python?
 
-Day 11 – Python Interview Questions: OOP (Part 1)
--------------------------------------------------
-Topic: Classes, Objects, Constructors, and self
-
+Day 11 – Classes, Objects, Constructors, and self[OOP concept's]
+----------------------------------------------------------------
 1. What is Object-Oriented Programming (OOP) in Python?
 2. What is a class in Python?
 3. What is an object in Python?
@@ -103,69 +91,43 @@ Topic: Classes, Objects, Constructors, and self
     
 ## Day 12 — OOP: Constructors and Variables
 -------------------------------------------
-
 56. What is the `__init__()` method in Python?
-
 57. What is a constructor in Python?
-
 58. What is the difference between `__init__()` and a normal method?
-
 59. What are instance variables in Python?
-
 60. What are class variables in Python?
 
 ## Day 13 — OOP: Methods
 ------------------------
-
 61. What are instance methods in Python?
-
 62. What are class methods in Python?
-
 63. What are static methods in Python?
-
 64. What is the difference between instance methods, class methods, and static methods?
-
 65. What is the `@classmethod` decorator in Python?
 
 ## Day 14 — OOP: Inheritance
 ----------------------------
-
 66. What is inheritance in Python?
-
 67. What are the different types of inheritance in Python?
-
 68. What is single inheritance in Python?
-
 69. What is multiple inheritance in Python?
-
 70. What is the `super()` function in Python?
 
 ## Day 15 — OOP: Polymorphism and Encapsulation
 -----------------------------------------------
-
 71. What is polymorphism in Python?
-
 72. What are the different types of polymorphism in Python?
-
 73. What is method overriding in Python?
-
 74. What is the difference between method overloading and method overriding in Python?
-
 75. What is encapsulation in Python?
 
 ## Day 16 — OOP: Abstraction
 ----------------------------
-
 76. What is abstraction in Python?
-
 77. What is the difference between abstraction and encapsulation?
-
 78. What are abstract classes in Python?
-
 79. What is the purpose of the `@abstractmethod` decorator?
-
 80. What is the difference between an abstract class and a concrete class?
-
 
 
 OBJECTIVE
